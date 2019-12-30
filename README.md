@@ -10,6 +10,8 @@ Step 1) Run LSTM_Russian.py to get the input sequence for the target language. T
 
 Step 2) Run Invariant_representations.py to obtain the emitted representations of the input from BiLSTM, based on which adversarial training is conducted to obtain the domain-invariant representation and then classification result on the projected data is obtained via an LSTM classifier.
  
+ The code has been tested on GPU. However, it should be runnable on CPU as well.
+ 
  Running the baselines:
  
  The benchmark folder contains the baselines as well the benchmark methods that can be used to compare to ADREL.

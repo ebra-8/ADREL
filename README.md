@@ -6,6 +6,8 @@ This document summarizes the steps to obtain the adversarial representations via
 
 As an example, the following steps can be performed to generate representations for Russian language.
 
+Note: If you want to  run the model on GloVe wword embeddings you need to run GloVe_embeddings.py first. Since the word embeddings are large (a few gigabytes), we did not include them in this repository.
+
 Step 1) Run LSTM_Russian.py to get the input sequence for the target language. The same code needs to be run on English to obtain the source language sequences.
 
 Step 2) Run Invariant_representations.py to obtain the emitted representations of the input from BiLSTM, based on which adversarial training is conducted to obtain the domain-invariant representation and then classification result on the projected data is obtained via an LSTM classifier.

@@ -1,8 +1,3 @@
-'''
-Created on Jun 21, 2018
-
-@author: eb
-'''
 from __future__ import print_function, division
 
 from keras import backend as K

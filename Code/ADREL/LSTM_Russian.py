@@ -1,13 +1,3 @@
-'''
-Created on Oct 20, 2017
-
-@author: eb
-'''
-'''
-Created on Jun 28, 2017
-
-@author: eb
-'''
 import numpy
 import h5py
 numpy.random.seed(7)

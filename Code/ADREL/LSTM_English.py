@@ -1,13 +1,3 @@
-'''
-Created on Oct 20, 2017
-
-@author: eb
-'''
-'''
-Created on Jun 28, 2017
-
-@author: eb
-'''
 import numpy
 import h5py
 numpy.random.seed(7)
@@ -38,7 +28,7 @@ os.environ['CUDA_VISIBLE_DEVICES']='3'
 lang='En'
 
 
-################ Russian Data Preparation
+################ English Data Preparation
 ################
 #### Build train data (list of texts) - 380
 trainPosFile = open("./dnm_data/MultiLingual/Setting1_trainWithExpert/DNM-train-pos.txt", "r")

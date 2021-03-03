@@ -18,12 +18,13 @@ As an example, the following steps can be performed to generate representations 
  
  The code has been tested on GPU. However, it should be runnable on CPU as well.
  
-  **Running the Deep Learning-based Benchmarks:**
+ **Running the Deep Learning-based Benchmarks:**
  
  The benchmark folder contains the baselines as well the benchmark methods that can be used to compare to ADREL.
  CNN_Kim2014_TF has the code for CNN-sentence
 
 **ADREL Model Specification**
+
 ADREL was implemented using Keras Python package on a single Linux machine with a GeForce GTX 1060 Graphical Processing Unit (GPU) with 6 GB of memory and 1,280 Cuda cores. To further ensure the reproducibility of our proposed model, here we report the exact architectural details as well as the parameter or hyper-parameter settings. The initial word embeddings for the first phase of ADREL were obtained by GloVe word representations (Pennington et al. 2015) applied to cybersecurity documents from our data collection. We included the initial word representations in the provided repository. For the second stage of ADREL, logistic (cross-entropy) loss was used to update model parameters, given its success in prior text classification applications (Goldberg 2017). To alleviate the need to tune learning rates (Goldberg 2017), Adam optimizer (Kingma and Ba 2015) was used to learn the model’s parameters. The specifications of the proposed model is given below. 
 
 | Component     | Layer              | # of Units | Activation Type | Output Shape         | Layer-Specific Parameters      |
@@ -41,6 +42,7 @@ ADREL was implemented using Keras Python package on a single Linux machine with 
 We have designed the model parsimoniously. That is, the architecture of the generator and discriminator are intended to be simple and to have few parameters. As for activation functions in BiLSTM, hyperbolic tangent (tanh) was used due to its proven performance in text analytics (Goldberg 2017).
 
 **Lexicon Construction for Keyword-based Baseline**
+
 We designed a baseline experiment for a lexicography-based hacker asset detection method, which conducts a series of vocabulary searches to find related keywords from a lexicon within the textual content in the dark web platforms. To our knowledge, there is no multilingual lexicon specifically for hacker asset detection. Thus, we constructed a customized lexicon with 1,059 hacker asset identifiers by compiling and modifying five publicly-available lexicons as well as incorporating the indicators suggested by two subject matter experts after scanning product descriptions from dark web platforms. The compilation process is detailed in seven steps: 
 **Step 1)** “Explore Terms,” a cybersecurity lexicon compiled by the Department of Homeland Security (DHS) (NICCS 2019). This lexicon was constructed as part of the National Initiative for Cybersecurity Careers and Studies (NICCS) program, and to our knowledge, is one of the most comprehensive lexicons. This lexicon also complements other previous lexicons such as the NISTIR (National Institute of Standards and Technology Internal Reports). While this lexicon provides a good starting point, it lacks hacker asset indicators (e.g., “XSS” (cross-site scripting), “zero-day,” “ransomware,” etc.), which can be useful for hacker asset detection. Hence, we used this lexicon as our initial seed to expand.
 **Step 2)** To extend the number of jargon and acronyms related to hacker assets, we expanded this lexicon with three publicly available smaller but more up-to-date lexicons (Arvatz 2017; DarkOwl 2019; Motherboard 2019).

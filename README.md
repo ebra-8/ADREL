@@ -58,3 +58,21 @@ We designed a baseline experiment for a lexicography-based hacker asset detectio
 **Step 7** We were able to translate the majority of the words into other languages, except for the acronyms such as RAT (Remote Access Trojan). For these acronyms, we used the English acronym since we have observed that English words are sometimes used in foreign languages as well. Also, since English words may be used in foreign languages, we added all English indicators to the Russian, French, and Italian lexicon.
 
 This systematic process yielded a multilingual lexicon in four languages with 1,059 English, 1,625 Russian, 1,512 French, and 1,356 Italian entries). We believe the compiled lexicon could be a helpful resource for cybersecurity firms who want to deploy non-ML-based dark web monitoring, before implementing a fully-fledged ML approach for hacker asset detection. Thus, we published this lexicon as part of our implementation code with the hope that the cybersecurity analytics research community can expand and utilize it in their future work.
+
+**References**
+*Arvatz, A. 2017. “Dark Web Slang and Other Tips for Navigating the Dark Web,” October 17. (https://intsights.com/blog/dark-web-slang-and-other-tips-for-navigating-the-dark-web).
+
+*“Cyber Threat Profiles.” 2020. New Jersey Cybersecurity and Communications Integration Cell (NJCCIC), July 10. (https://www.cyber.nj.gov/threat-center/threat-profiles).
+
+*DarkOwl. 2019. “Darknet Glossary.” (https://www.darkowl.com/darknet-glossary).
+
+*Goldberg, Y. 2017. “Neural Network Methods for Natural Language Processing,” Synthesis Lectures on Human Language Technologies (10:1), pp. 1–309.
+
+*Kingma, D. P., and Ba, J. 2015. “Adam: A Method for Stochastic Optimization,” International Conference on Learning Representations (ICLR), San Diego, CA.
+
+*Motherboard. 2019. “The Motherboard E-Glossary of Cyber Terms and Hacking Lingo.” (https://www.vice.com/en_us/article/mg79v4/hacking-glossary).
+
+*NICCS. 2019. “Explore Terms: A Glossary of Common Cybersecurity Terminology,” National Initiative for Cybersecurity Careers and Studies. (https://niccs.us-cert.gov/about-niccs/glossary#key).
+
+*Pennington, J., Socher, R., and Manning, C. D. 2015. “GloVe: Global Vectors for Word Representation,” Empirical Methods in Natural Language Processing (EMNLP), pp. 1532–1543.
+

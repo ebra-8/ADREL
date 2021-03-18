@@ -59,6 +59,17 @@ We designed a baseline experiment for a lexicography-based hacker asset detectio
 
 This systematic process yielded a multilingual lexicon in four languages with 1,059 English, 1,625 Russian, 1,512 French, and 1,356 Italian entries). We believe the compiled lexicon could be a helpful resource for cybersecurity firms who want to deploy non-ML-based dark web monitoring, before implementing a fully-fledged ML approach for hacker asset detection. Thus, we published this lexicon as part of our implementation code with the hope that the cybersecurity analytics research community can expand and utilize it in their future work.
 
+**Case Study Demonstration: French Platform**
+We show the proof of value for the implementation of our automated hacker asset detection artifact via a case study (Gregor and Hevner 2013). An additional DNM, French Deep Web (FDW), was collected eight months after CLHAD’s training. This DNM is among reputable foreign platforms in the DeepDotWeb directory, with 3,215 total product descriptions. CLHAD was trained on the labeled dataset with French product descriptions and English product descriptions. The 8-month gap between training and testing helps to assess the applicability of the system in detecting future hacker assets. Table C1 shows three examples of hacker assets detected by CLHAD. While CLHAD detects these hacker assets with high confidence, neither of the MT-based methods (e.g., (BiLSTM+MT, CNN+MT) detected them.
+
+| Product Description Excerpt (French) | Hacker Asset Description     | Asset Category | CLHAD Confidence | 
+| :-----:                              | :-:                          | :-:            | :-:              |
+| ‘‘gros packs de logiciel de Hacking avec un logiciel de recuperateur de mot de passe sur USB. […] branchez la clé sur l ordinateur de la victime […]’’     | Password stealing software installed on a USB key          | Spyware         | 0.998               | 
+| ‘‘Logiciel Sentry MBA last version 1.5 –[…]-Logiciel espion : vole les mots de pass, prise de controle de l'ecran, dossiers, […]’’     | Spyware to control victim’s screen and stealing credentials | Spyware + RAT (Remote Access Trojan)        | 0.996            | 
+| ‘‘Ce programme permet de cloner les cartes de crédits (PUCE Y COMPRIS !) Il vous suffit d'acheter des Dumps a des vendeurs sur le market , […]’’| Software to copy credit card’s magnetic stripe information| Credit card cloner| 0.922|
+
+Interestingly, while no instances of “spyware” and “credit card cloner” appeared in our French training set, CLHAD was able to detect them in the testbed. This suggests that the hacker asset knowledge from English helps detect new hacker assets in French. Such knowledge transfer enabled CLHAD to accurately detect 754 hacker assets in 3,215 unseen product descriptions while trained on only 147 French products collected eight months before the test.
+
 **References**
 
 * Arvatz, A. 2017. “Dark Web Slang and Other Tips for Navigating the Dark Web,” October 17. (https://intsights.com/blog/dark-web-slang-and-other-tips-for-navigating-the-dark-web).
@@ -68,6 +79,8 @@ This systematic process yielded a multilingual lexicon in four languages with 1,
 * DarkOwl. 2019. “Darknet Glossary.” (https://www.darkowl.com/darknet-glossary).
 
 * Goldberg, Y. 2017. “Neural Network Methods for Natural Language Processing,” Synthesis Lectures on Human Language Technologies (10:1), pp. 1–309.
+
+* Gregor, S., and Hevner, A. R. 2013. “Positioning and Presenting Design Science Research for Maximum Impact,” MIS Quarterly (37:2), pp. 337–355.
 
 * Kingma, D. P., and Ba, J. 2015. “Adam: A Method for Stochastic Optimization,” International Conference on Learning Representations (ICLR), San Diego, CA.
 

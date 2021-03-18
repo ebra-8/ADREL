@@ -1,4 +1,4 @@
-**Implementation of Adversarial Representation Learning**
+**Implementation of Adversarial Representation Learning in CLHAD Framework**
 
 Requirements: Keras, TensorFlow, Python
 
@@ -60,7 +60,7 @@ We designed a baseline experiment for a lexicography-based hacker asset detectio
 This systematic process yielded a multilingual lexicon in four languages with 1,059 English, 1,625 Russian, 1,512 French, and 1,356 Italian entries). We believe the compiled lexicon could be a helpful resource for cybersecurity firms who want to deploy non-ML-based dark web monitoring, before implementing a fully-fledged ML approach for hacker asset detection. Thus, we published this lexicon as part of our implementation code with the hope that the cybersecurity analytics research community can expand and utilize it in their future work.
 
 **Case Study Demonstration: French Platform**
-We show the proof of value for the implementation of our automated hacker asset detection artifact via a case study (Gregor and Hevner 2013). An additional DNM, French Deep Web (FDW), was collected eight months after CLHAD’s training. This DNM is among reputable foreign platforms in the DeepDotWeb directory, with 3,215 total product descriptions. CLHAD was trained on the labeled dataset with French product descriptions and English product descriptions. The 8-month gap between training and testing helps to assess the applicability of the system in detecting future hacker assets. Table C1 shows three examples of hacker assets detected by CLHAD. While CLHAD detects these hacker assets with high confidence, neither of the MT-based methods (e.g., (BiLSTM+MT, CNN+MT) detected them.
+We show the proof of value for the implementation of our automated hacker asset detection artifact via a case study (Gregor and Hevner 2013). An additional DNM, French Deep Web (FDW), was collected eight months after CLHAD’s training. This DNM is among reputable foreign platforms in the DeepDotWeb directory, with 3,215 total product descriptions. CLHAD was trained on the labeled dataset with French product descriptions and English product descriptions. The 8-month gap between training and testing helps to assess the applicability of the system in detecting future hacker assets. The table below shows three examples of hacker assets detected by CLHAD. While CLHAD detects these hacker assets with high confidence, neither of the MT-based methods (e.g., (BiLSTM+MT, CNN+MT) detected them.
 
 | Product Description Excerpt (French) | Hacker Asset Description     | Asset Category | CLHAD Confidence | 
 | :-----:                              | :-:                          | :-:            | :-:              |
